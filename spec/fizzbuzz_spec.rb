@@ -25,4 +25,7 @@ describe 'fizzbuzz' do
   it 'returns "ERROR" when passed a string' do
     expect(fizzbuzz('abc')).to eq 'ERROR'
   end
+  it 'returns "0" when passed 0' do
+    expect(fizzbuzz(0)).to eq 0
+  end
 end

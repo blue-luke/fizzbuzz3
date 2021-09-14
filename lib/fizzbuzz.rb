@@ -1,11 +1,17 @@
 def fizzbuzz(number)
-  if number % 15 == 0
-    return 'fizzbuzz'
-  elsif number % 3 == 0
-    return 'fizz'
-  elsif number % 5 == 0
-    return 'buzz'
+  if number.is_a? Numeric
+    if number % 15 == 0
+      return 'fizzbuzz'
+    elsif number % 3 == 0
+      return 'fizz'
+    elsif number % 5 == 0
+      return 'buzz'
+    else
+      number
+    end
   else
-    number
+    return 'ERROR'
   end
 end
+
+puts fizzbuzz('abc')
